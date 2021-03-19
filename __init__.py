@@ -17,9 +17,8 @@ class SimpleYoutubeSkill(BetterCommonPlaySkill):
                                 CPSMatchType.DOCUMENTARY,
                                 CPSMatchType.VIDEO]
         self._search_cache = {}
-        self.skill_icon = join(dirname(__file__), "ui", "ytube.jpg")
-        if "fallback_mode" not in self.settings:
-            self.settings["fallback_mode"] = False
+        self.skill_icon = join(dirname(__file__), "ui", "ytube.jpg")       
+        self.settings["fallback_mode"] = True
 
     # common play
     def CPS_search(self, phrase, media_type=CPSMatchType.GENERIC):
